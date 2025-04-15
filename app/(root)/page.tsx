@@ -105,7 +105,7 @@ const Page = () => {
   return (
     <div className="container mx-auto p-6 max-w-7xl">
 
-      <div className="mb-8">
+      <section className="mb-12">
         <h2 className="text-lg font-semibold mb-4">RevOps Interview Personas</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {personas.map((persona, index) => (
@@ -131,9 +131,9 @@ const Page = () => {
             </Card>
           ))}
         </div>
-      </div>
+      </section>
 
-      <div>
+      <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-semibold">Recent Interviews</h2>
           <Button variant="link" className="text-blue-600">
@@ -143,10 +143,10 @@ const Page = () => {
 
         <div className="flex flex-col gap-4">
           {recentInterviews.map((interview, index) => (
-            <RecentInterviewCard  {...interview} />
+            <RecentInterviewCard key={index} {...interview} />
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 };
