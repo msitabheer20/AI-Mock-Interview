@@ -4,14 +4,17 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { CheckIcon } from "lucide-react";
 import { useParams } from "next/navigation";
+import { mockInterviewResults } from "@/constants";
 
 export default function InterviewCompletePage() {
   const router = useRouter();
   const params = useParams();
   const interviewId = params.interviewId as string;
 
+  const scoreId = mockInterviewResults.find(result => result.interviewId === interviewId)?.id;
+
   const handleViewScore = () => {
-    router.push(`/interview/${interviewId}/score`);
+    router.push(`/interview/${interviewId}/score/${scoreId}`);
   };
 
   const handleBackToHome = () => {

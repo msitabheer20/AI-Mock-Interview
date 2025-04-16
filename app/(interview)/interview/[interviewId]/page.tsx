@@ -18,6 +18,7 @@ export default function InterviewSetupPage() {
     try {
       await navigator.mediaDevices.getUserMedia({ audio: true });
       setMicPermission(true);
+      router.push(`/interview/${interviewId}/start`);
     } catch (error) {
       console.error("Microphone access denied:", error);
     }

@@ -2,20 +2,24 @@
 
 import React from "react";
 import { Card, CardContent } from "./ui/card";
+import { useRouter } from "next/navigation";
 
 interface InterviewCardProps {
+    id: string;
     image: string;
     name: string;
     role: string;
     description: string;
 }
 
-const onClick = () => {
-    alert("clicked");
-}
+const InterviewCard: React.FC<InterviewCardProps> = ({ id, image, name, role, description }) => {
 
+    const router = useRouter();
 
-const InterviewCard: React.FC<InterviewCardProps> = ({ image, name, role, description }) => {
+    const onClick = () => {
+        router.push(`/interview/${id}`);
+    }
+
     return (
         <Card onClick={onClick} className="bg-gray-900 border-0 overflow-hidden shadow-md cursor-pointer">
             <CardContent className="p-4">

@@ -1,45 +1,52 @@
 export const personas = [
-    {
+    {   
+        id: "interview-1",
         name: "Mia Carter",
         role: "REVENUE OPERATIONS DIRECTOR",
         description: "Strategic and analytical, excelling in optimizing sales processes and cross-functional collaboration.",
         image: "/avatars/avatar1.jpg",
     },
     {
+        id: "interview-2",
         name: "Isabelle Tran",
         role: "SALES ENABLEMENT MANAGER",
         description: "Encouraging and engaging, great for refining coaching skills and delivering impactful training sessions.",
         image: "/avatars/avatar2.jpg",
     },
     {
+        id: "interview-3",
         name: "Liam Bennett",
         role: "DEAL DESK MANAGER",
         description: "Sharp and detail-oriented, ideal for mastering pricing strategies and contract negotiations.",
         image: "/avatars/avatar4.jpg",
     },
-    {
-        name: "Ethan Patel",
-        role: "GTM SYSTEMS MANAGER",
-        description: "Tech-savvy and solutions-driven, perfect for fine-tuning automation workflows and CRM best practices.",
-        image: "/avatars/avatar5.jpg",
-    },
-    {
-        name: "Noah Chambers",
-        role: "REVENUE ANALYTICS MANAGER",
-        description: "Data-focused and insightful, great for interpreting revenue trends and making data-driven recommendations.",
-        image: "/avatars/avatar6.jpg",
-    },
-    {
-        name: "Dhruv Patel",
-        role: "SENIOR TECHNICAL LEAD",
-        description: "Focused on technical excellence and innovation, great for refining technical interview skills and problem-solving.",
-        image: "/avatars/avatar1.jpg",
-    },
+    // {
+    //     id: "interview-4",
+    //     name: "Ethan Patel",
+    //     role: "GTM SYSTEMS MANAGER",
+    //     description: "Tech-savvy and solutions-driven, perfect for fine-tuning automation workflows and CRM best practices.",
+    //     image: "/avatars/avatar5.jpg",
+    // },
+    // {
+    //     id: "interview-5",
+    //     name: "Noah Chambers",
+    //     role: "REVENUE ANALYTICS MANAGER",
+    //     description: "Data-focused and insightful, great for interpreting revenue trends and making data-driven recommendations.",
+    //     image: "/avatars/avatar6.jpg",
+    // },
+    // {
+    //     id: "interview-6",
+    //     name: "Dhruv Patel",
+    //     role: "SENIOR TECHNICAL LEAD",
+    //     description: "Focused on technical excellence and innovation, great for refining technical interview skills and problem-solving.",
+    //     image: "/avatars/avatar1.jpg",
+    // },
 ];
 
 export const recentInterviews = [
     {
-        index: 0,
+        id: "recent-interview-1",
+        interviewId: "interview-1",
         persona: "Mia Carter",
         role: "Revenue Operations Director",
         companyTitle: "Lead Optimization Engineer at Google",
@@ -50,7 +57,8 @@ export const recentInterviews = [
         image: "/avatars/avatar1.jpg",
     },
     {
-        index: 1,
+        id: "recent-interview-2",
+        interviewId: "interview-2",
         persona: "Isabelle Tran",
         role: "Revenue Analytics Manager",
         companyTitle: "Senior Marketing Agent at Airbnb",
@@ -61,7 +69,8 @@ export const recentInterviews = [
         image: "/avatars/avatar2.jpg",
     },
     {
-        index: 2,
+        id: "recent-interview-3",
+        interviewId: "interview-3",
         persona: "Isabelle Tran",
         role: "Sales Enablement Manager",
         companyTitle: "Lead Optimization Engineer at Warpchase",
@@ -72,7 +81,8 @@ export const recentInterviews = [
         image: "/avatars/avatar2.jpg",
     },
     {
-        index: 3,
+        id: "recent-interview-4",
+        interviewId: "interview-4",
         persona: "Mia Carter",
         role: "Revenue Operations Director",
         companyTitle: "Lead Optimization Engineer at Donquadtech",
@@ -83,7 +93,8 @@ export const recentInterviews = [
         image: "/avatars/avatar1.jpg",
     },
     {
-        index: 4,
+        id: "recent-interview-5",
+        interviewId: "interview-5",
         persona: "Mia Carter",
         role: "Revenue Operations Director",
         companyTitle: "Senior Marketing Agent at Condax",
@@ -97,7 +108,8 @@ export const recentInterviews = [
 
 export const mockInterviewResults = [
     {
-        id: "interview-1",
+        id: "result-1",
+        interviewId: "interview-1",
         interviewInfo: {
             totalScore: 4.5,
             role: "VP of RevOps",
@@ -153,8 +165,10 @@ export const mockInterviewResults = [
         ],
         summaryFeedback: "You demonstrated great clarity and role alignment. Your responses showed strong domain knowledge in revenue operations, particularly in process optimization and cross-functional collaboration. To improve, work on expanding your answers under pressure and quantifying your achievements with specific metrics and business outcomes."
     },
+
     {
-        id: "interview-2",
+        id: "result-2",
+        interviewId: "interview-2",
         interviewInfo: {
             totalScore: 3.8,
             role: "GTM Systems Manager",
@@ -210,8 +224,10 @@ export const mockInterviewResults = [
         ],
         summaryFeedback: "Your technical skills and problem-solving approach are strong assets, particularly your systematic thinking and knowledge of GTM systems. To advance in a cross-functional GTM role, focus on developing your ability to communicate technical concepts more effectively to non-technical colleagues and consider how to frame system improvements in terms of business outcomes rather than technical specifications."
     },
+
     {
-        id: "interview-3",
+        id: "result-3",
+        interviewId: "interview-3",
         interviewInfo: {
             totalScore: 4.2,
             role: "Sales Enablement Manager",
