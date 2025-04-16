@@ -5,7 +5,6 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 
 interface RecentInterviewCardProps {
-    index: number;
     persona: string;
     companyTitle: string;
     duration: string;
@@ -17,10 +16,9 @@ interface RecentInterviewCardProps {
     role: string;
 }
 
-const RecentInterviewCard: React.FC<RecentInterviewCardProps> = ({ index, persona, companyTitle, duration, date, preview, score, image, disabled, role }) => {
+const RecentInterviewCard: React.FC<RecentInterviewCardProps> = ({ persona, companyTitle, duration, date, preview, score, image, disabled, role }) => {
     return (
         <div
-            key={index}
             className="bg-gray-800 border-0 rounded-lg p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-md hover:bg-gray-750 transition-colors"
         >
             <div className="flex items-center gap-4">

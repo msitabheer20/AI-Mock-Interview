@@ -1,10 +1,15 @@
+"use client";
+
+import CreateBotModal from "@/components/CreateBotModal";
 import { Button } from "@/components/ui/button";
 import { History } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
+    const [open, setOpen] = useState(false);
+
     return (
         <div className="root-layout">
             <nav className="flex items-center justify-between">
@@ -27,9 +32,10 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
                     <History className="w-4 h-4 mr-2" />
                         Interview History
                         </Button>
-                    <Button variant="default">
+                    <Button onClick={() => setOpen(true)} variant="default">
                         Create Custom Mock Interview
                     </Button>
+                    <CreateBotModal isOpen={open} onClose={() => setOpen(false)} />
                 </div>
             </nav>
             {children}
